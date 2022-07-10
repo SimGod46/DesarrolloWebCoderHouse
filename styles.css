@@ -41,11 +41,10 @@ body{
 }
 
 .listaHeader{
-    display: flex;
-    width:80vw;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    width:75vw;
 }
 
 .listaHeader li a{
@@ -57,11 +56,12 @@ body{
     color: #eeeeee;
     font-weight:100%;
     font-size:x-large;
-    width: 125%;
+    /*width: 125%;*/
 }
 .listaHeader li a:hover{
     background-color: yellow;
     color:black;
+    transition:0.3s;
 }
 .miniatura{
     width:20vw;
@@ -73,6 +73,10 @@ body{
 
 @media screen and (max-width:770px){
     .listaHeader{
+        display: flex;
+        width:80vw;
+        justify-content: space-evenly;
+        align-items: center;
         flex-direction: column;
     }
     .navegacion{
@@ -123,6 +127,7 @@ body{
     padding-left: 5%;
     padding-right: 5%;
 }
+
 .coverMitad{
     grid-column: span 2;
     grid-row: span 2;
@@ -149,6 +154,7 @@ body{
     border-radius: 20px;
     height:30%;
     padding:0px 15px;
+    transform:rotate(-3deg);
 }
 .bigButtonMatricula p{
     color: white;
@@ -175,15 +181,22 @@ body{
 @keyframes carrousel{
     0%{
         background-image: url(./imagenes/personas1.jpeg);
+        transform: rotate(2deg);
     }
     33%{
         background-image: url(./imagenes/personas2.png);
+        transform: rotate(-3deg);
+
     }
     66%{
         background-image: url(./imagenes/personas3.jpg);
+        transform: rotate(1deg);
+
     }
     100%{
         background-image: url(./imagenes/personas4.jpeg);
+        transform: rotate(-1deg);
+
     }
 }
 .imagenCollage1{
@@ -246,23 +259,7 @@ body{
 
 
 /* ---------- Pagina contacto ----------*/
-.campoForm{
-    padding-left:3%;
-    text-align: left;
-    width:15vw;
-    border:black 1px solid;
-    }
-.campoForm input{
-    outline: none;
-    border:none;
-    font-family: 'Baloo 2', cursive;
-    font-size:large;
-    width:15vw;
-}
-.formButtons{
-    text-align:center;
-    width:20%
-}
+
 .gridContacto{
     display:grid;
     grid-template-columns: repeat(2,1fr);
@@ -273,6 +270,40 @@ body{
     padding-top:5%;
     padding-bottom:5%;
 }
+
+.campoForm{
+    padding-left:3%;
+    text-align: left;
+    width:70%;
+    border:black 1px solid;
+    
+}
+.entrada{
+    width:95%;
+    outline: none;
+    border:none;
+    font-family: 'Baloo 2', cursive;
+    font-size:large;
+    
+}
+.botonForm{
+    width:125px;
+    background-color: black;
+    color: white;
+}
+
+.botonForm:hover{
+    background-color: #FFDF2B;
+    color: black;
+    transition:0.3s;
+}
+
+.terminarForm{
+    width:73%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
 
 /* ---------- Modificadores ----------*/
 .centrado{
@@ -287,7 +318,6 @@ body{
     grid-template-rows: auto auto auto;
     row-gap: 5%;
 }
-
 /* ---------- Vista tablet ---------- */
 @media screen and (max-width:1239px){
     .gridInicio{
@@ -309,16 +339,6 @@ body{
         height:7%;
         padding: 0 10%; 
     }
-    .campoForm{
-        padding-left:3%;
-        padding-right:3%;
-        text-align: left;
-        border:black 1px solid;
-        width:25vw;
-    }
-    .campoForm input{
-        width:25vw;
-    }
 }
 
 /* ---------- Vista mobile ---------- */
@@ -326,7 +346,7 @@ body{
     /* ---------- Inicio ----------*/
     .gridInicio{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 300px);
+        grid-template-rows: repeat(4, 300px) 150px 150px 550px;
     }
     .carrouselInformacionPreu{
         grid-column: span 1;
@@ -375,17 +395,27 @@ body{
         grid-auto-flow: column;
     }
     .campoForm{
-        padding-left:3%;
+        width:94%;
         padding-right:3%;
-        text-align: left;
-        width:30vw;
-        border:black 1px solid;
         }
-    .campoForm input{
-        width:30vw;
-        }
+
     .comentArea{
         grid-row: span 2;
+    }
+    .terminarForm{
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10%;
+    }
+}
+
+@media screen and (max-width:553px){
+    .gridContacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, 1fr);
+        grid-auto-flow: column;
     }
 
 }
