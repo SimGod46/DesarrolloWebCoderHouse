@@ -2,9 +2,9 @@
 *{
 	margin: 0;
 	padding: 0;
+    font-family: 'Baloo 2', cursive;
 }
 html{
-    font-family: 'Baloo 2', cursive;
     overflow: hidden;
     height: 100%;
 }
@@ -35,20 +35,23 @@ body{
     display:flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     width:100%;
     height:10vh;
     background-color: black;
+    z-index:1;
 }
 
 .listaHeader{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 1fr;
+    column-gap: 20px;
     width:75vw;
 }
 
 .listaHeader li a{
-    height:10vh;
+    height:5vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -56,10 +59,8 @@ body{
     color: #eeeeee;
     font-weight:100%;
     font-size:x-large;
-    /*width: 125%;*/
 }
 .listaHeader li a:hover{
-    background-color: yellow;
     color:black;
     transition:0.3s;
 }
@@ -92,15 +93,8 @@ body{
     }
 }
 /* ---------- Pie de pagina relacionada a las redes sociales ----------*/
-.piePagina{
-    text-align: center;
-}
-.piePagina ul li{
-    display: inline;
-}
-.piePagina ul li a img{
-    width: 5%;
-    height:5%;
+.piePaginaMiniatura{
+    width: 10vw;
     padding: 0 10%; 
 
 
@@ -115,7 +109,7 @@ body{
 }
 
 .informacionImagen{
-    width:30%;
+    width:35%;
 }
 .imagenBanner{
     margin-top: 2%;
