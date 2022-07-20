@@ -8,39 +8,69 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<title>Preuniversitario VDD</title>
 </head>
 <body class ="templateGrid">
+	<!--Encabezado, misma estructura en toda la pagina-->
 	<header class="navegacion">
 		<a class="miniatura" href="#"> 
-			<img src="./imagenes/Preu-VDD.png" alt="Logo preu VDD">
+			<img class="miniaturaImg" src="./imagenes/Preu-VDD.png" alt="Logo preu VDD">
 		</a>
 		<nav>
 			<ul class="listaHeader">
-				<li class="btn btn-warning"><a href="#">Inicio</a></li>
-				<li class="btn btn-warning"><a href="./paginas/quienes-somos.html">Quienes somos</a></li>
-				<li class="btn btn-warning"><a href="./paginas/programas.html">Programas</a></li>
-				<li class="btn btn-warning"><a href="./paginas/sede.html">Sede</a></li>
-				<li class="btn btn-warning"><a href="./paginas/contacto.html">Contacto</a></li>
+				<li class="btn btn-warning"><a href="../index.html">Inicio</a></li>
+				<li class="btn btn-warning"><a href="../paginas/quienes-somos.html">Quienes somos</a></li>
+				<li class="btn btn-warning"><a href="../paginas/programas.html">Programas</a></li>
+				<li class="btn btn-warning"><a href="../paginas/sede.html">Sede</a></li>
+				<li class="btn btn-warning"><a href="#">Contacto</a></li>
 			</ul>
 		</nav>	
 	</header>
 
-	<main class="informacion">
+	<main>
 		<h1>Preuniversitario VDD</h1> 
 		<section class="container">
-			<div class="row mt-md-5">
-				<h2>¿Que es PreVDD?</h2>
-				<p class="informacionParrafo">PREUDD es un preuniversitario gratuito dirigido por alumnos de la Universidad del Desarrollo y con el apoyo de la Dirección de Asuntos Estudiantiles (DAE) destinado a preparar para la PSU a alumnos que no cuenten con los recursos para costear un preuniversitario.
-					PREUDD cuenta con las áreas de Lenguaje, Matemática, Ciencias e Historia para IV Medio y un programa de nivelación en el área de Matemática para III Medio.</p>
-			</div>
-			<div class="row centrado">
-				<img class="informacionImagen" src="./imagenes/are-you-ready.jpg" alt="Señaletica ¿estas listo?">
-			</div>
+			<div class="row mt-5">
 
-			<div class = "row mt-md-5">
+				<!-- Carrousel pagina de inicio con informacion importante-->
+				<div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+					<div class="carousel-indicators botonCarrousel">
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					<div class="carousel-item active">
+						<h2>Objetivo insitucional</h2>
+						<p>Dar acceso a los jóvenes del país a una educación especializada y de calidad, para obtener rendimientos académicos exitosos y conseguir óptimas evaluaciones de selección a la Educación Superior, es lo que nos motiva. Nuestro enfoque pedagógico, se articula en ejes centrales como son la Enseñanza contextualizada, el Desarrollo de habilidades cognitivas y la Entrega de técnicas y procedimientos para la resolución de problemas.</p>
+						<img src="./imagenes/lapices.jpg" class="d-block w-70 carruselMiniatura" alt="escritorio con lapices">
+					</div>
+					<div class="carousel-item">
+						<h2>¿Que es PreVDD?</h2>
+						<p class="informacionParrafo">PREUDD es un preuniversitario gratuito dirigido por alumnos de la Universidad del Desarrollo y con el apoyo de la Dirección de Asuntos Estudiantiles (DAE) destinado a preparar para la PSU a alumnos que no cuenten con los recursos para costear un preuniversitario. PREUDD cuenta con las áreas de Lenguaje, Matemática, Ciencias e Historia para IV Medio y un programa de nivelación en el área de Matemática para III Medio.</p>
+						<img src="./imagenes/are-you-ready.jpg " class="d-block w-70 carruselMiniatura" alt="señaletica con mensaje, ¿estas listo?">
+					</div>
+					<div class="carousel-item">
+						<h2>¿Por qué preparte con nosotros?</h2>
+						<p>Porque entrarás a un camino de excelencia, que te ayudará a aumentar tus posibilidades de acceder a la carrera y universidad que quieras, utilizando nuestro Modelo Educativo Preu PDV 360°, y la guía de nuestros profesores expertos en la Prueba de Selección; por supuesto, junto con tu esfuerzo y entorno como alumno.</p>
+						<img src="./imagenes/approved.jpg" class="d-block w-70 carruselMiniatura" alt="Personas asintiendo">
+					</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon botonCarrousel" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+					<span class="carousel-control-next-icon botonCarrousel" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<!-- Termino del carrousel-->
+			</div>
+			<!-- Sección de noticias, proximamente hacer referencia a otra pagina-->
+			<div class = "row mt-5">
 				<div class="col-md-6">
 					<h2>Noticias</h2>
 					<article>
@@ -60,7 +90,7 @@
 							Finalmente, todo concluyó con un rico coffee break para los asistentes y estudiantes, quienes posteriormente retomaron sus actividades de Lenguaje.</p>
 					</article>
 				</div>
-	
+				<!-- Calendario -->
 				<div class="col-md-6 contenedorCalendario">
 					<h2>Fechas Importantes</h2>
 					<ul>
@@ -82,20 +112,20 @@
 				</div>
 			</div>
 
-			<div class="row mt-md-5">
+			<div class="row mt-5">
 
 				<div class="col-md-6 centrado">
 					<div class="bigButtonMatricula centrado"><p>Matriculate hoy y reserva tu cupo para el preuniversitario</p></div>
 				</div>
 				
 				<div class="col-md-6">
-
-					<div class="row mt-md-5">
+					<!-- Testimonios -->
+					<div class="row mt-5">
 						<h2>Testimonio 1</h2>
 						<p>“Me encantaba que si alguien de la sección no entendía lo hacían pasar adelante al pizarrón a realizar el ejercicio que no entendió”.</p>
 					</div>
 		
-					<div class="row mt-md-5">
+					<div class="row mt-5">
 						<h2>Testimonio 2</h2>
 						<p>“Los profes sabían interactuar con los alumnos en sus enseñanzas y son muy simpáticos. lo que me gusto es que en caso de alguna duda siempre tenían disposición para responder las peguntas”.</p>
 					</div>
@@ -105,11 +135,12 @@
 
 		</section>
 	</main>
+	<!-- Pie de pagina, misma estructura para todo el sitio-->
     <footer class="container">
 		<ul class = "row">
-			<li class="col-md-4"><a href="https://www.facebook.com/preuvdd" target="_blank"><img class="piePaginaMiniatura" src="./imagenes/facebook-logo.png" alt="logo facebook"></a></li>
-			<li class="col-md-4"><a href="https://www.instagram.com/preuvdd" target="_blank"><img class="piePaginaMiniatura" src="./imagenes/instagram-logo.png" alt="logo instagram"></a></li>
-			<li class="col-md-4"><a href="https://api.whatsapp.com/send/?phone=56934834000&text&app_absent=0" target="_blank"><img class="piePaginaMiniatura" src="./imagenes/whatsapp-logo.png" alt="logo whatsapp"></a></li>
+			<li class="col-4"><a href="https://www.facebook.com/preuvdd" target="_blank"><img class="piePaginaMiniatura" src="./imagenes/facebook-logo.png" alt="logo facebook"></a></li>
+			<li class="col-4"><a href="https://www.instagram.com/preuvdd" target="_blank"><img class="piePaginaMiniatura" src="./imagenes/instagram-logo.png" alt="logo instagram"></a></li>
+			<li class="col-4"><a href="https://api.whatsapp.com/send/?phone=56934834000&text&app_absent=0" target="_blank"><img class="piePaginaMiniatura" src="./imagenes/whatsapp-logo.png" alt="logo whatsapp"></a></li>
 		</ul>
     </footer>
 </body>
