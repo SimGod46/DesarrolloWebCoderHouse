@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* ---------- Pagina index ----------*/
+.informacionImagen {
+  width: 35%; }
+
+.cuadroFecha {
+  background-color: #FFDF2B;
+  font-weight: 100%;
+  font-size: x-large;
+  padding: 0px 10%;
+  text-align: center; }
+
+.calendario {
+  display: grid;
+  grid-template-columns: 18% 70%;
+  grid-auto-rows: 1fr;
+  row-gap: 5%;
+  column-gap: 5%; }
+
+.contenedorCalendario {
+  overflow-y: auto; }
+
+.bigButtonMatricula {
+  background-color: black;
+  border-radius: 20px;
+  height: 30%;
+  width: 70%;
+  padding: 0px 15px;
+  transform: rotate(-3deg); }
+  .bigButtonMatricula p {
+    color: #eeeeee;
+    font-size: x-large;
+    font-size: 130%;
+    text-align: center; }
+
+.carruselMiniatura {
+  margin: auto; }
+
+/* ---------- Pagina sede ----------*/
+.geoTable {
+  width: 40vw;
+  height: 50vh; }
+  .geoTable div {
+    width: 100%;
+    height: 100%; }
+
+/* ---------- Formateo de toda la pagina ----------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", cursive; }
+
+html {
+  overflow: hidden;
+  height: 100%; }
+
+h1 {
+  border-bottom: 5px #FFDF2B solid;
+  font-size: 40px;
+  width: fit-content;
+  margin-bottom: 30px; }
+
+ul {
+  list-style: none; }
+
+main {
+  padding-left: 5%;
+  padding-right: 5%; }
+
+body {
+  background-color: #eeeeee;
+  height: 100%;
+  overflow: auto; }
+
+/* ---------- Encabezado y menu de navegación por la pagina ----------*/
+.navegacion {
+  position: sticky;
+  top: 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  z-index: 1; }
+
+.listaHeader {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 20px;
+  width: 75vw;
+  margin-top: 1%; }
+
+/* ---------- Pie de pagina relacionada a las redes sociales ----------*/
+.piePaginaMiniatura {
+  width: 10vw;
+  padding: 0 10%; }
+
+.listaHeader li a {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #eeeeee;
+  font-weight: 100%;
+  font-size: x-large; }
+  .listaHeader li a:hover {
+    color: black;
+    transition: 0.3s; }
+
+.miniatura {
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.miniaturaImg {
+  width: 12.5vw; }
+
+/* ---------- Modificadores ----------*/
+.centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto auto;
+  row-gap: 5%; }
+
+/* ---------- Vista tablet ---------- */
+@media screen and (max-width: 1239px) {
+  .contenedorCalendario {
+    height: 70vh; }
+  .listaHeader li a {
+    font-size: large; } }
+
+/* ---------- Vista mobile ---------- */
+@media screen and (max-width: 770px) {
+  .listaHeader {
+    display: flex;
+    width: 80vw;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column; }
+    .listaHeader li {
+      width: 70vw;
+      margin-top: 20px; }
+  .navegacion {
+    flex-direction: column;
+    position: initial;
+    height: 100%; }
+  .miniatura {
+    display: none; }
+  .piePaginaMiniatura {
+    width: 15vw; }
+  /* ---------- Inicio ----------*/
+  .bigButtonMatricula {
+    height: 100%;
+    transform: rotate(0deg); }
+  .carruselMiniatura {
+    width: 200px; }
+  .botonCarrousel {
+    opacity: 0%; }
+  /* ---------- ubicaciones ----------*/
+  .frameMapa {
+    height: 100px; }
+  /* ---------- contacto ----------*/
+  .gridContacto {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-auto-flow: column; }
+  .comentArea {
+    grid-row: span 2; }
+  .terminarForm {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10%;
+    place-items: center; } }
+
+@media screen and (max-width: 553px) {
+  .gridContacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 1fr);
+    grid-auto-flow: column; } }
+
+/* ---------- Pagina contacto ----------*/
+.gridContacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 10%;
+  row-gap: 5%;
+  margin-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+.entrada {
+  width: 95%;
+  outline: none;
+  border: none;
+  font-family: "Baloo 2", cursive;
+  font-size: large; }
+
+.botonForm {
+  width: 125px;
+  background-color: black;
+  color: #eeeeee; }
+  .botonForm:hover {
+    background-color: #FFDF2B;
+    color: black;
+    transition: 0.3s; }
+
+.terminarForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly; }
+
+/* Por el momento no existe csss especifico para esta pagina*/
+/* ---------- Pagina quienes-somos ----------*/
+.carrouselPersonas {
+  width: 100%;
+  height: 40vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: carrousel 10s infinite; }
+
+@keyframes carrousel {
+  0% {
+    background-image: url(./imagenes/personas1.jpeg);
+    transform: rotate(2deg); }
+  33% {
+    background-image: url(./imagenes/personas2.png);
+    transform: rotate(-3deg); }
+  66% {
+    background-image: url(./imagenes/personas3.jpg);
+    transform: rotate(1deg); }
+  100% {
+    background-image: url(./imagenes/personas4.jpeg);
+    transform: rotate(-1deg); } }

@@ -1,0 +1,99 @@
+/* ---------- Formateo de toda la pagina ----------*/
+*{
+	margin: 0;
+	padding: 0;
+    font-family: $fuentePrincipal, cursive;
+}
+html{
+    overflow: hidden;
+    height: 100%;
+}
+h1 {
+    border-bottom: 5px $colorPrimario solid;
+    font-size:40px;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+ul{
+    list-style: none;
+}
+main{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+body{
+   background-color: $colorTerciario; 
+   height:100%;
+   overflow: auto;
+}
+
+/* ---------- Encabezado y menu de navegación por la pagina ----------*/
+.navegacion{
+    position:sticky;
+    top:0%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:10vh;
+    background-color: $colorSecundario;
+    z-index:1;
+}
+
+.listaHeader{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    width:75vw;
+    margin-top:1%;
+}
+
+/* ---------- Pie de pagina relacionada a las redes sociales ----------*/
+.piePaginaMiniatura{
+    width: 10vw;
+    padding: 0 10%; 
+}   
+
+.listaHeader{ 
+    li a{
+    height:5vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $colorTerciario;
+    font-weight:100%;
+    font-size:x-large;
+    
+    &:hover{
+        color:$colorSecundario;
+        transition:0.3s;
+        }
+    }
+}
+
+.miniatura{
+    width:20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.miniaturaImg{
+    width:12.5vw;
+}
+/* ---------- Modificadores ----------*/
+.centrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.templateGrid{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 5%;
+}

@@ -1,0 +1,35 @@
+/* ---------- Pagina contacto ----------*/
+.gridContacto{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    column-gap: 10%;
+    row-gap: 5%;
+    margin-bottom: 10%;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+.entrada{
+    width:95%;
+    outline: none;
+    border:none;
+    font-family: $fuentePrincipal, cursive;
+    font-size:large;
+    
+}
+.botonForm{
+    width:125px;
+    background-color: $colorSecundario;
+    color: $colorTerciario;
+    &:hover{
+        background-color: $colorPrimario;
+        color: $colorSecundario;
+        transition:0.3s;
+    }
+}
+
+.terminarForm{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+}
