@@ -1,0 +1,24 @@
+SEO:
+Se agregaron las keyword:
+PAES,PDT,PSU: Referencia al nombre de la prueba de ingreso a la universidad en Chile
+Asesoría Vocacional,Carreras,Ensayos,Modelo Educativo,Sedes: Lo que ofrece PVDD como preuniversitario
+Historia,Matemáticas,Lenguaje,Física,Química,Biología: Las asignaturas evalaudas en la PAES
+PVDD, Educación, Preuniversitario VDD: Nombres relacionados con la institución
+universidad, instituto: Las insituciones que solicitan PAES para su ingreso 
+
+inicio,home,menu principal : Especifico para index.html
+contacto,información,numero,correo: espeifico para contacto.html
+programa,informacion,contenidos,modalidad,cursos: especifico para programa.html
+quienes somos, voluntariado, participantes, profesores, alumnos: especifico para quienes-somos.html
+sede,ubicación, localización, fisico, presencial: especifico para sede.html
+
+Se agregaron las descripciones en referencia al contenido de cada pagina
+
+Se mantuvieron los titulos originales
+Se mantuvo la jerarquia de titulos (h1,h2,h3)
+
+SCSS:
+Se añadio un mixin para la creación de grids
+se añadio un extend para centrar items
+se utilizo un mapa para los colores
+se añadió un color con mayor contraste a la barra de navegación.
