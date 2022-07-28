@@ -1,4 +1,12 @@
 $fuentePrincipal: 'Baloo 2';
-$colorPrimario: #FFDF2B;
-$colorSecundario: black;
-$colorTerciario: #eeeeee;
+$colores:(
+    "colorPrimario": #FFDF2B,
+    "colorSecundario": black,
+    "colorTerciario": #eeeeee,
+    "colorFontNav": #6D5F12
+);
+@mixin grillaBase($filas,$columnas){
+    display:grid;
+    grid-template-rows: $filas;
+    grid-template-columns: $columnas;
+}

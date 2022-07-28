@@ -4,7 +4,7 @@
 }
 
 .cuadroFecha{
-    background-color:$colorPrimario;
+    background-color:map-get($colores,"colorPrimario");
     font-weight:100%;
     font-size:x-large;
     padding: 0px 10%;
@@ -21,14 +21,14 @@
     overflow-y: auto;
 }
 .bigButtonMatricula{
-    background-color: $colorSecundario;
+    background-color: map-get($colores,"colorSecundario");
     border-radius: 20px;
     height:30%;
     width:70%;
     padding:0px 15px;
     transform:rotate(-3deg);
     p{
-        color: $colorTerciario;
+        color: map-get($colores,"colorTerciario");
         font-size: x-large;
         font-size: 130%;
         text-align: center;

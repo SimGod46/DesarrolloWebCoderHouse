@@ -1,8 +1,6 @@
 /* ---------- Pagina contacto ----------*/
 .gridContacto{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(5,1fr);
+    @include grillaBase(repeat(5,1fr),repeat(2,1fr));
     column-gap: 10%;
     row-gap: 5%;
     margin-bottom: 10%;
@@ -19,11 +17,11 @@
 }
 .botonForm{
     width:125px;
-    background-color: $colorSecundario;
-    color: $colorTerciario;
+    background-color: map-get($colores,"colorSecundario");
+    color: map-get($colores,"colorTerciario");
     &:hover{
-        background-color: $colorPrimario;
-        color: $colorSecundario;
+        background-color: map-get($colores,"colorPrimario");
+        color: map-get($colores,"colorSecundario");
         transition:0.3s;
     }
 }
