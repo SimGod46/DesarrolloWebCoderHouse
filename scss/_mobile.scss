@@ -1,5 +1,5 @@
 /* ---------- Vista tablet ---------- */
-@media screen and (max-width:1239px){
+@media screen and (max-width:$anchoTablet){
     .contenedorCalendario{
         height:70vh;
     }
@@ -9,7 +9,7 @@
 }
 
 /* ---------- Vista mobile ---------- */
-@media screen and (max-width:770px){
+@media screen and (max-width:$anchoMobile){
     .listaHeader{
         display: flex;
         width:80vw;
@@ -64,7 +64,7 @@
     }
 }
 
-@media screen and (max-width:553px){
+@media screen and (max-width:$anchoSmallMobile){
     .gridContacto{
         @include grillaBase(repeat(11,1fr),1fr);
         grid-auto-flow: column;
